@@ -23,23 +23,23 @@ def extract_content(d_type: str, d_name: str, env: str):
         print(f"Status code: {response.status_code}")
         if response.status_code == 200:
             print(json.dumps(response.json(), indent=2))            
-# 1. Extract content from a structured PDF file
-document_type = "tax_forms"
-document_name = "1040_2020_sample.pdf"
-environment = "production"
+# # 1. Extract content from a structured PDF file
+# document_type = "tax_forms"
+# document_name = "1040_2020_sample.pdf"
+# environment = "production"
 
-extract_content(document_type, document_name, environment)
+# extract_content(document_type, document_name, environment)
 
-# 2. Extract content from unstructured PDF files using the Topic method
+# # 2. Extract content from unstructured PDF files using the Topic method
 
 document_type = "legal_code"
-document_name = "Creative Commons Legal Code.pdf"
+document_name = "CC BY-NC-SA 4.0.pdf"
 environment = "development"
 
 extract_content(document_type, document_name, environment)
 
 # 3. Extract content from unstructured PDF files using a Summarizer.
-document_type = "reports"
-document_name = "summarizer_crop.pdf"
+# document_type = "reports"
+# document_name = "whs-22h.pdf"
 
-extract_content(document_type, document_name, environment)
+# extract_content(document_type, document_name, environment)
