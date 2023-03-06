@@ -25,7 +25,7 @@ def extract_content(d_type: str, d_name: str, env: str):
             print(json.dumps(response.json(), indent=2))            
 # 1. Extract content from a structured PDF file
 document_type = "tax_forms"
-document_name = "1040_2020_sample.pdf"
+document_name = "senior_1040_2019_sample.pdf"
 environment = "production"
 
 extract_content(document_type, document_name, environment)
