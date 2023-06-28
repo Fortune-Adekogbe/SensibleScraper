@@ -1,22 +1,15 @@
-import os
 import json
 import requests
 
 
-API_KEY = os.getenv('API_KEY')
-
+SENSIBLE_API_KEY = "Your API Key Here"
 
 def extract_content(d_type: str, d_name: str, env: str):
-    """
-    Extract content from a PDF file.
-    """
     url = f"https://api.sensible.so/v0/extract/{d_type}?environment={env}"
-
     headers = {
-        "Authorization": f"Bearer {API_KEY}",
+        "Authorization": f"Bearer {SENSIBLE_API_KEY}",
         "content-type": "application/pdf"
     }
-
     with open(d_name, 'rb') as fp:
         pdf_file = fp.read()
         response = requests.post(url, headers=headers, data=pdf_file)
