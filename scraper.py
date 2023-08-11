@@ -2,19 +2,19 @@ import json
 import requests
 
 
-SENSIBLE_API_KEY = "your API key here"
+SENSIBLE_API_KEY = "YOUR API KEY HERE"
 
 def extract_content(d_type: str, d_name: str, env: str):
-    url = f"https://api.sensible.so/v0/extract/{d_type}?environment={env}"
+    url = "https://api.sensible.so/v0/extract/{}?environment={}".format(d_type, env)
     headers = {
-        "Authorization": f"Bearer {SENSIBLE_API_KEY}",
+        "Authorization": "Bearer {}".format(SENSIBLE_API_KEY),
         "content-type": "application/pdf"
     }
     with open(d_name, 'rb') as fp:
         pdf_file = fp.read()
         response = requests.post(url, headers=headers, data=pdf_file)
 
-        print(f"Status code: {response.status_code}")
+        print("Status code: {}".format(response.status_code))
         if response.status_code == 200:
             print(json.dumps(response.json(), indent=2))
 
