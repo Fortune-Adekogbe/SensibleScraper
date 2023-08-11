@@ -10,6 +10,7 @@ def extract_content(d_type: str, d_name: str, env: str):
         "Authorization": "Bearer {}".format(SENSIBLE_API_KEY),
         "content-type": "application/pdf"
     }
+    
     with open(d_name, 'rb') as fp:
         pdf_file = fp.read()
         response = requests.post(url, headers=headers, data=pdf_file)
