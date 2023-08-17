@@ -26,10 +26,10 @@ environment = "production"
 
 extract_content(document_type, document_name, environment)
 
-# 2. Extract content from unstructured PDF files using the Topic method
+# 2. Extract content from unstructured PDF files using the Query method
 
-document_type = "legal_code"
-document_name = "CC BY-NC-SA 3.0.pdf"
+document_type = "research_paper"
+document_name = "U-Net.pdf"
 environment = "development"
 
 extract_content(document_type, document_name, environment)
