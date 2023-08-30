@@ -2,7 +2,7 @@ import json
 import requests
 
 
-SENSIBLE_API_KEY = "YOUR API KEY HERE"
+SENSIBLE_API_KEY = "Your API Key Here"
 
 def extract_content(d_type: str, d_name: str, env: str):
     url = "https://api.sensible.so/v0/extract/{}?environment={}".format(d_type, env)
@@ -21,21 +21,21 @@ def extract_content(d_type: str, d_name: str, env: str):
 
 # 1. Extract content from a structured PDF file
 document_type = "tax_forms"
-document_name = "senior_1040_2019_sample.pdf"
+document_name = "f1040_FILLED FAKE DATA.pdf"
 environment = "production"
 
 extract_content(document_type, document_name, environment)
 
-# 2. Extract content from unstructured PDF files using the Query method
+# # 2. Extract content from unstructured PDF files using the Query method
 
-document_type = "research_paper"
-document_name = "U-Net.pdf"
-environment = "development"
+# document_type = "research_paper"
+# document_name = "U-Net.pdf"
+# environment = "development"
 
-extract_content(document_type, document_name, environment)
+# extract_content(document_type, document_name, environment)
 
-# 3. Extract content from unstructured PDF files using a Summarizer.
-document_type = "reports"
-document_name = "OPEC_MOMR_April_2023.pdf"
+# # 3. Extract content from unstructured PDF files using a Summarizer.
+# document_type = "reports"
+# document_name = "OPEC_MOMR_April_2023.pdf"
 
-extract_content(document_type, document_name, environment)
+# extract_content(document_type, document_name, environment)
