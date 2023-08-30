@@ -26,16 +26,16 @@ environment = "production"
 
 extract_content(document_type, document_name, environment)
 
-# # 2. Extract content from unstructured PDF files using the Query method
+# 2. Extract content from unstructured PDF files using the Query method
 
-# document_type = "research_paper"
-# document_name = "U-Net.pdf"
-# environment = "development"
+document_type = "research_paper"
+document_name = "U-Net.pdf"
+environment = "development"
 
-# extract_content(document_type, document_name, environment)
+extract_content(document_type, document_name, environment)
 
-# # 3. Extract content from unstructured PDF files using a Summarizer.
-# document_type = "reports"
-# document_name = "OPEC_MOMR_April_2023.pdf"
+# 3. Extract content from unstructured PDF files using a Summarizer.
+document_type = "reports"
+document_name = "OPEC_MOMR_April_2023.pdf"
 
-# extract_content(document_type, document_name, environment)
+extract_content(document_type, document_name, environment)
